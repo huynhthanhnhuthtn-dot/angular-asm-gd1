@@ -1,0 +1,24 @@
+<a class="back" routerLink="/products">Quay lại</a>
+
+@if (loading()) {
+  <p class="state">Đang tải sản phẩm...</p>
+} @else if (error()) {
+  <p class="state error">{{ error() }}</p>
+} @else if (product(); as product) {
+  <article class="detail">
+    <img [src]="product.image" [alt]="product.name" />
+
+    <div class="info">
+      <span class="category">{{ product.category }}</span>
+      <h1>{{ product.name }}</h1>
+      <p class="price">{{ product.price | number }}đ</p>
+
+      <h2>Mô tả sản phẩm</h2>
+      <p class="description">{{ product.description }}</p>
+
+      <button class="add-btn" (click)="addToCart()">
+        {{ added() ? 'Đã thêm vào giỏ' : 'Thêm vào giỏ hàng' }}
+      </button>
+    </div>
+  </article>
+}

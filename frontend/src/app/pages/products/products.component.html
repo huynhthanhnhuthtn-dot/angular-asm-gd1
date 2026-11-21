@@ -1,0 +1,24 @@
+<header class="page-head">
+  <p class="eyebrow">DANH MỤC</p>
+  <h1>Tất cả phụ kiện</h1>
+  <p>{{ products().length }} sản phẩm cho ô tô và xe máy</p>
+</header>
+
+@if (loading()) {
+  <p class="state">Đang tải sản phẩm...</p>
+} @else if (error()) {
+  <p class="state error">{{ error() }}</p>
+} @else {
+  <div class="product-grid">
+    @for (product of products(); track product._id) {
+      <a class="product-card" [routerLink]="['/products', product._id]">
+        <img [src]="product.image" [alt]="product.name" />
+        <div class="card-body">
+          <span class="category">{{ product.category }}</span>
+          <h2>{{ product.name }}</h2>
+          <p class="price">{{ product.price | number }}đ</p>
+        </div>
+      </a>
+    }
+  </div>
+}

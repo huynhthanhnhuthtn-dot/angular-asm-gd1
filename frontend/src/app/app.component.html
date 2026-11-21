@@ -1,0 +1,38 @@
+<div class="phone-frame">
+  <main class="phone-content">
+    <router-outlet />
+  </main>
+
+  <nav class="bottom-nav">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <svg class="nav-icon" viewBox="0 0 24 24">
+        <path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" />
+      </svg>
+      <span>Trang chủ</span>
+    </a>
+
+    <a routerLink="/products" routerLinkActive="active">
+      <svg class="nav-icon" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+        <rect x="14" y="14" width="7" height="7" rx="1" />
+      </svg>
+      <span>Sản phẩm</span>
+    </a>
+
+    <a routerLink="/cart" routerLinkActive="active">
+      <span class="cart-icon">
+        <svg class="nav-icon" viewBox="0 0 24 24">
+          <circle cx="9" cy="20" r="1" />
+          <circle cx="18" cy="20" r="1" />
+          <path d="M2 3h3l2.5 12h11L21 7H6" />
+        </svg>
+        @if (cartCount$ | async; as count) {
+          <span class="cart-badge">{{ count }}</span>
+        }
+      </span>
+      <span>Giỏ hàng</span>
+    </a>
+  </nav>
+</div>

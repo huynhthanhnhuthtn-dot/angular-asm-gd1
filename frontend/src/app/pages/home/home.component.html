@@ -1,0 +1,32 @@
+<section class="banner">
+  <p class="eyebrow">PHỤ KIỆN Ô TÔ & XE MÁY</p>
+  <h1>Nâng tầm<br />chuyến đi của bạn</h1>
+  <p class="banner-text">Camera, đèn, thảm lót và nhiều phụ kiện chất lượng cho xế yêu.</p>
+  <a class="banner-btn" routerLink="/products">Mua ngay</a>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Sản phẩm bán chạy</h2>
+    <a routerLink="/products">Xem tất cả</a>
+  </div>
+
+  @if (loading()) {
+    <p class="state">Đang tải sản phẩm...</p>
+  } @else if (error()) {
+    <p class="state error">{{ error() }}</p>
+  } @else {
+    <div class="product-grid">
+      @for (product of products(); track product._id) {
+        <a class="product-card" [routerLink]="['/products', product._id]">
+          <img [src]="product.image" [alt]="product.name" />
+          <div class="card-body">
+            <span class="category">{{ product.category }}</span>
+            <h3>{{ product.name }}</h3>
+            <p class="price">{{ product.price | number }}đ</p>
+          </div>
+        </a>
+      }
+    </div>
+  }
+</section>

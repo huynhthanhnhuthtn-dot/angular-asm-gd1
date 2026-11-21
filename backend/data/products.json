@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Camera hành trình 4K",
+    "price": 1890000,
+    "image": "https://placehold.co/600x400/0f172a/f8fafc?text=Dashcam+4K",
+    "category": "Camera",
+    "description": "Camera hành trình 4K góc rộng, có cảm biến G-sensor và chế độ ghi đêm sắc nét."
+  },
+  {
+    "name": "Thảm lót sàn 5D",
+    "price": 650000,
+    "image": "https://placehold.co/600x400/0f172a/f8fafc?text=Car+Mat+5D",
+    "category": "Nội thất",
+    "description": "Thảm lót sàn 5D chống trượt, chống nước, dễ vệ sinh cho cả xe ô tô và xe máy."
+  },
+  {
+    "name": "Giá đỡ điện thoại từ tính",
+    "price": 290000,
+    "image": "https://placehold.co/600x400/0f172a/f8fafc?text=Phone+Holder",
+    "category": "Giá đỡ",
+    "description": "Giá đỡ điện thoại từ tính gắn taplo, xoay 360 độ, giữ chắc khi lái xe."
+  },
+  {
+    "name": "Đèn LED trợ sáng",
+    "price": 420000,
+    "image": "https://placehold.co/600x400/0f172a/f8fafc?text=LED+Light",
+    "category": "Đèn",
+    "description": "Đèn LED trợ sáng công suất cao, lắp đơn giản, tăng tầm nhìn khi đi đêm."
+  },
+  {
+    "name": "Bọc vô lăng da PU",
+    "price": 180000,
+    "image": "https://placehold.co/600x400/0f172a/f8fafc?text=Steering+Cover",
+    "category": "Nội thất",
+    "description": "Bọc vô lăng da PU êm tay, chống trơn trượt, phù hợp hầu hết xe ô tô."
+  },
+  {
+    "name": "Nước hoa ô tô cao cấp",
+    "price": 150000,
+    "image": "https://placehold.co/600x400/0f172a/f8fafc?text=Car+Perfume",
+    "category": "Tinh chỉnh",
+    "description": "Nước hoa ô tô hương gỗ sang trọng, khuếch tán lâu, thiết kế treo gương tiện lợi."
+  },
+  {
+    "name": "Gương chiếu hậu 360",
+    "price": 1250000,
+    "image": "https://placehold.co/600x400/0f172a/f8fafc?text=360+Mirror",
+    "category": "An toàn",
+    "description": "Gương chiếu hậu tích hợp camera 360 độ, hỗ trợ lùi xe và quan sát điểm mù."
+  },
+  {
+    "name": "Sạc nhanh trên xe 65W",
+    "price": 350000,
+    "image": "https://placehold.co/600x400/0f172a/f8fafc?text=Car+Charger",
+    "category": "Sạc",
+    "description": "Củ sạc nhanh 65W với 2 cổng, hỗ trợ sạc đồng thời điện thoại và máy tính bảng."
+  }
+]

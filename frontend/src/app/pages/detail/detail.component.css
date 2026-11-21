@@ -1,0 +1,75 @@
+.back {
+  display: inline-block;
+  margin: 16px;
+  color: #e11d48;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.detail {
+  padding: 0 16px 24px;
+}
+
+.detail > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 16px;
+  background: #f1f5f9;
+}
+
+.info {
+  padding-top: 16px;
+}
+
+.category {
+  color: #e11d48;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.info h1 {
+  margin: 6px 0;
+  font-size: 22px;
+}
+
+.price {
+  margin: 0 0 20px;
+  color: #e11d48;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.info h2 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.description {
+  margin: 0 0 24px;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #e11d48;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.state {
+  padding: 60px 16px;
+  color: #64748b;
+  font-size: 13px;
+  text-align: center;
+}
+
+.state.error {
+  color: #e11d48;
+}

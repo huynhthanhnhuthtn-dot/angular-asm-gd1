@@ -1,0 +1,44 @@
+<header class="page-head">
+  <h1>Giỏ hàng</h1>
+  <p>Kiểm tra phụ kiện bạn đã chọn</p>
+</header>
+
+@if (items$ | async; as items) {
+  @if (items.length === 0) {
+    <div class="empty">
+      <p>Giỏ hàng đang trống.</p>
+      <a routerLink="/products">Chọn sản phẩm</a>
+    </div>
+  } @else {
+    <div class="cart-list">
+      @for (item of items; track item.product._id) {
+        <article class="cart-item">
+          <img [src]="item.product.image" [alt]="item.product.name" />
+
+          <div class="item-info">
+            <h2>{{ item.product.name }}</h2>
+            <p class="unit">{{ item.product.price | number }}đ / cái</p>
+            <div class="quantity">
+              <button type="button" (click)="decrease(item.product._id)">-</button>
+              <span>{{ item.quantity }}</span>
+              <button type="button" (click)="increase(item.product._id)">+</button>
+            </div>
+          </div>
+
+          <div class="item-right">
+            <button type="button" class="remove" (click)="remove(item.product._id)">Xóa</button>
+            <strong>{{ item.product.price * item.quantity | number }}đ</strong>
+          </div>
+        </article>
+      }
+    </div>
+
+    <section class="summary">
+      <div class="total-row">
+        <span>Tổng tiền</span>
+        <strong>{{ total$ | async | number }}đ</strong>
+      </div>
+      <button type="button" class="checkout">Thanh toán</button>
+    </section>
+  }
+}
