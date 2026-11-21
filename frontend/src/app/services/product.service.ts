@@ -5,7 +5,7 @@ import { Product } from '../models/product.model';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
-  readonly API_URL = 'http://localhost:5000/api/products';
+  readonly API_URL = 'https://angular-asm-gd1-9ue5.vercel.app/api/products';
 
   constructor(private http: HttpClient) {}
 
